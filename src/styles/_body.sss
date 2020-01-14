@@ -1,0 +1,49 @@
+/* DEFAULTS FOR TEXT WEIGHT & RESPONSIVE SIZE */
+
+body
+  @apply font-regular
+  @apply text-sm
+  @apply leading-sm
+
+body > footer
+  @apply text-sm
+  @apply leading-sm
+
+
+@screen c11
+  body
+    @apply text-base
+    @apply leading-base
+
+
+/* MINIMAL LAYOUT */
+
+body > header,
+body > nav,
+body > main,
+body > footer
+  @apply w-screen
+
+body > main
+  @apply min-h-11c
+  @apply py-2b
+
+body > main h1:not(.unstyled)
+  @apply px-1b
+  @apply pb-2b
+
+body > footer
+  @apply min-h-7c
+  @apply py-2b
+
+
+@screen c11
+  body > main,
+  body > footer
+    @apply py-3b
+
+@screen c18
+  body > main,
+  body > footer
+    @apply py-4b
+  

@@ -1,0 +1,30 @@
+mixin card(cardHeading, cardHue, borderWidth, classes=[])
+  - const maybeHue = cardHue ? `-${cardHue}` : ''
+  - const maybeWidth = borderWidth ? `-${borderWidth}` : ''
+  
+  div(class=`
+    w-full
+    h-full
+    bg-lighter${maybeHue}
+    border${maybeWidth}
+    border-soft${maybeHue}
+    rounded-half-b
+    text-sm
+    leading-sm-narrow
+    ${classes.join(' ')}
+  `)
+
+    if cardHeading
+      h3(class=`
+        bg-light${maybeHue}
+        p-1b
+        border-b${maybeWidth}
+        border-soft${maybeHue}
+        rounded-t
+      `)= cardHeading
+    
+    div(class=`
+      overflow-x-scroll
+      p-1b
+    `)
+      block

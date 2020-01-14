@@ -1,0 +1,42 @@
+/* RESPONSIVE COLUMNS FOR SIZING VARIABLE-WIDTH CONTENT */
+
+.column:not(.auto)
+  @apply w-full
+
+.column:not(.unset-margin)
+  @apply mb-1b
+
+.column:not(.unset-padding)
+  @apply p-1b
+
+
+/* RESPONSIVE SIZE CLASSES */
+
+.column.half-tablet
+  @apply max-w-5c
+
+.column.full-tablet
+  @apply max-w-10c
+
+
+@screen c18
+  .column.third-widescreen
+    @apply max-w-5c
+  .column.half-widescreen
+    max-width: 30rem
+  .column.two-thirds-widescreen
+    @apply max-w-10c
+
+@screen c25
+  .column.fourth-hdscreen,
+  .column.quarter-hdscreen
+    @apply max-w-5c
+  .column.third-hdscreen
+    max-width: 26.66rem
+  .column.half-hdscreen
+    @apply max-w-10c
+  .column.two-thirds-hdscreen
+    max-width: 53.33rem
+  .column.three-fourths-hdscreen,
+  .column.three-quarters-hdscreen
+    @apply max-w-15c
