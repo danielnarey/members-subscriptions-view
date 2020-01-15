@@ -16,7 +16,7 @@ test('build script generated the public files', async (t) => {
   ].map((file) => path.resolve(context, 'dist', file));
 
   const filesOut = await build(context, config);
-  
+
   t.true(
     filesExpected.every((fp) => filesOut.includes(fp)),
   );
