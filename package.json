@@ -41,5 +41,10 @@
   },
   "engines": {
     "node": ">=10"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }
