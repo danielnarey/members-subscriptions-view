@@ -17,3 +17,28 @@ The application sorts and renders a subscriber list and allows the user to selec
 - Fetches data from a server running on `localhost:3000`
 - Builds from `local-dev` branch
 - Server setup at https://github.com/danielnarey/code-test-express
+
+### Setup instructions
+
+```bash
+# Server setup
+git clone https://github.com/danielnarey/code-test-express
+cd code-test-express
+npm i
+npm run migrate && npm run seed
+npm start
+
+# Test that you are getting JSON output at http://localhost:3000/members
+# Keep process running and open a new CLI window
+
+# Client setup
+git clone https://github.com/danielnarey/members-subscriptions-view
+cd members-subscriptions-view
+git checkout local-dev
+npm i
+npm run build
+cd dist && npx ws
+
+# Test that the app is loading with data from the server at http://localhost:8000/
+
+```
