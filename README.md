@@ -34,6 +34,7 @@ npm start
 # Client setup
 git clone https://github.com/danielnarey/members-subscriptions-view
 cd members-subscriptions-view
+git checkout local-dev
 npm i
 npm run build
 cd dist && npx ws
