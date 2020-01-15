@@ -9,7 +9,7 @@ The application sorts and renders a subscriber list and allows the user to selec
 
 - Used to develop and test UI
 - Pre-bundles sample data from `src/data/members.json`
-- Deploys from `master` branch to https://danielnarey-members-subscriptions-view.netlify.com/
+- Deploys from `master` branch to https://members-subscriptions-view.netlify.com/
 
 ## Local Development Version
 
