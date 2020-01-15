@@ -1,14 +1,17 @@
 /* global document */
 
+import fetch from 'unfetch';
 import Elm from '../app/Main.elm';
-import members from '../data/members.json';
 
 
-try {
-  Elm.Main.init({
-    node: document.getElementById('appRoot'),
-    flags: members,
+fetch('http://localhost:3000/members')
+  .then((res) => res.json())
+  .then((json) => {
+    Elm.Main.init({
+      node: document.getElementById('appRoot'),
+      flags: json.data,
+    });
+  })
+  .catch((err) => {
+    console.error(err);
   });
-} catch (err) {
-  console.error(err);
-}
